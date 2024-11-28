@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traductor Interactivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Traductor Interactivo Inglés-Español</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Traducir Palabras</h2>
+      <input type="text" id="wordInput" placeholder="Escribe una palabra...">
+      <select id="languageSelect">
+        <option value="enToEs">Inglés a Español</option>
+        <option value="esToEn">Español a Inglés</option>
+      </select>
+      <button id="translateButton">Traducir</button>
+      <p id="translationResult"></p>
+    </section>
+
+    <section>
+      <h2>Diccionario</h2>
+      <div>
+        <button id="sortEnglish">Ordenar por Inglés</button>
+        <button id="sortSpanish">Ordenar por Español</button>
+      </div>
+      <div id="categoryFilters">
+        <label><input type="radio" name="category" value="all" checked> Todos</label>
+        <label><input type="radio" name="category" value="animals"> Animales</label>
+        <label><input type="radio" name="category" value="fruits"> Frutas</label>
+        <label><input type="radio" name="category" value="colors"> Colores</label>
+        <label><input type="radio" name="category" value="physical_descriptions"> Descripcion fisica</label>
+        <label><input type="radio" name="category" value="skills"> Habilidades</label>
+        <label><input type="radio" name="category" value="verbs"> Verbos</label>
+        
+      </div>
+      <table id="dictionaryTable">
+        <thead>
+          <tr>
+            <th>Inglés</th>
+            <th>Español</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Añadir Nueva Palabra</h2>
+      <form id="addWordForm">
+        <input type="text" id="newWordEnglish" placeholder="Palabra en inglés">
+        <input type="text" id="newWordSpanish" placeholder="Traducción en español">
+        <input type="text" id="newWordExample" placeholder="Ejemplo de uso">
+        <select id="newWordCategory">
+          <option value="animals">Animales</option>
+          <option value="fruits">Frutas</option>
+          <option value="colors">Colores</option>
+          <option value="physical_descriptions">Descripcion fisica</option>
+          <option value="skills">Habilidades</option>
+          <option value="verbs">Verbos</option>
+        </select>
+        <button type="submit">Añadir</button>
+      </form>
+    </section>
+  </main>
+  <script src="dictionary.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
